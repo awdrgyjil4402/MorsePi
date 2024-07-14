@@ -2,7 +2,6 @@ package org.example;
 
 import com.pi4j.Pi4J;
 import com.pi4j.context.Context;
-import com.pi4j.io.gpio.digital.DigitalOutput;
 
 /*
 Todo:
@@ -12,23 +11,19 @@ Todo:
 
 public class MorseCodeApp {
 
-    static int PIN_LED = 22;
-
-
     public static void main(String[] args) throws InterruptedException {
         String inputString = args[0];
         System.out.println(inputString);
 
-        Context pi4j = Pi4J.newAutoContext();
-        DigitalOutput led = pi4j.digitalOutput().create(PIN_LED);
+        Context context = Pi4J.newAutoContext();
+
 
         MorseCode morseCode = new MorseCode();
-        Electrify electrify = new Electrify();
-        String OutputString = morseCode.Encode(inputString);
-        char[] OutputArray = OutputString.toCharArray();
-        int OutputArrayLength = OutputString.length();
+        Electrify electrify = new Electrify(context);
+        String outputString = morseCode.Encode(inputString);
 
-        electrify.Encode(OutputArray, OutputArrayLength);
-        pi4j.shutdown();
+        char[] outputArray = outputString.toCharArray();
+        electrify.control(outputArray);
+        context.shutdown();
     }
 }
