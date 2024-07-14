@@ -17,13 +17,12 @@ public class MorseCodeApp {
 
         Context context = Pi4J.newAutoContext();
 
-
         MorseCode morseCode = new MorseCode();
-        Electrify electrify = new Electrify(context);
-        String outputString = morseCode.Encode(inputString);
+        String morseCodeString = morseCode.Encode(inputString);
 
-        char[] outputArray = outputString.toCharArray();
-        electrify.control(outputArray);
+        Electrify electrify = new Electrify(context);
+        electrify.control(morseCodeString.toCharArray());
+
         context.shutdown();
     }
 }
