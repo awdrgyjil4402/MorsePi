@@ -3,98 +3,93 @@ package org.example;
 import java.util.ArrayList;
 
 public class MorseCode {
-    private int length;
-    private char[] InputArray;
 
-
-    public MorseCode (String input) {
-        length = input.length();
-        InputArray = input.toCharArray();
+    public String Encode (String input) {
+        int length = input.length();
+        char[] inputArray = input.toCharArray();
         System.out.println(length);
-        System.out.println(InputArray);
-    }
-    public String Encode () {
+        System.out.println(inputArray);
         String output = "";
         for (int i = 0; i < length; i++) {
-            if (Character.toLowerCase(InputArray[i]) == ' ') {
+            if (Character.toLowerCase(inputArray[i]) == ' ') {
                 output = output + " ";
             }
-            if (Character.toLowerCase(InputArray[i]) == 'a') {
+            if (Character.toLowerCase(inputArray[i]) == 'a') {
                 output = output + ".-";
             }
-            if (Character.toLowerCase(InputArray[i]) == 'b') {
+            if (Character.toLowerCase(inputArray[i]) == 'b') {
                 output = output + "-...";
             }
-            if (Character.toLowerCase(InputArray[i]) == 'c') {
+            if (Character.toLowerCase(inputArray[i]) == 'c') {
                 output = output + "-.-.";
             }
-            if (Character.toLowerCase(InputArray[i]) == 'd') {
+            if (Character.toLowerCase(inputArray[i]) == 'd') {
                 output = output + "-..";
             }
-            if (Character.toLowerCase(InputArray[i]) == 'e') {
+            if (Character.toLowerCase(inputArray[i]) == 'e') {
                 output = output + ".";
             }
-            if (Character.toLowerCase(InputArray[i]) == 'f') {
+            if (Character.toLowerCase(inputArray[i]) == 'f') {
                 output = output + "..-.";
             }
-            if (Character.toLowerCase(InputArray[i]) == 'g') {
+            if (Character.toLowerCase(inputArray[i]) == 'g') {
                 output = output + "--.";
             }
-            if (Character.toLowerCase(InputArray[i]) == 'h') {
+            if (Character.toLowerCase(inputArray[i]) == 'h') {
                 output = output + "....";
             }
-            if (Character.toLowerCase(InputArray[i]) == 'i') {
+            if (Character.toLowerCase(inputArray[i]) == 'i') {
                 output = output + "..";
             }
-            if (Character.toLowerCase(InputArray[i]) == 'j') {
+            if (Character.toLowerCase(inputArray[i]) == 'j') {
                 output = output + ".----";
             }
-            if (Character.toLowerCase(InputArray[i]) == 'k') {
+            if (Character.toLowerCase(inputArray[i]) == 'k') {
                 output = output + "-.-";
             }
-            if (Character.toLowerCase(InputArray[i]) == 'l') {
+            if (Character.toLowerCase(inputArray[i]) == 'l') {
                 output = output + ".-..";
             }
-            if (Character.toLowerCase(InputArray[i]) == 'm') {
+            if (Character.toLowerCase(inputArray[i]) == 'm') {
                 output = output + "--";
             }
-            if (Character.toLowerCase(InputArray[i]) == 'n') {
+            if (Character.toLowerCase(inputArray[i]) == 'n') {
                 output = output + "-.";
             }
-            if (Character.toLowerCase(InputArray[i]) == 'o') {
+            if (Character.toLowerCase(inputArray[i]) == 'o') {
                 output = output + "---";
             }
-            if (Character.toLowerCase(InputArray[i]) == 'p') {
+            if (Character.toLowerCase(inputArray[i]) == 'p') {
                 output = output + ".--.";
             }
-            if (Character.toLowerCase(InputArray[i]) == 'q') {
+            if (Character.toLowerCase(inputArray[i]) == 'q') {
                 output = output + "--.-";
             }
-            if (Character.toLowerCase(InputArray[i]) == 'r') {
+            if (Character.toLowerCase(inputArray[i]) == 'r') {
                 output = output + ".-.";
             }
-            if (Character.toLowerCase(InputArray[i]) == 's') {
+            if (Character.toLowerCase(inputArray[i]) == 's') {
                 output = output + "...";
             }
-            if (Character.toLowerCase(InputArray[i]) == 't') {
+            if (Character.toLowerCase(inputArray[i]) == 't') {
                 output = output + "-";
             }
-            if (Character.toLowerCase(InputArray[i]) == 'u') {
+            if (Character.toLowerCase(inputArray[i]) == 'u') {
                 output = output + "..-";
             }
-            if (Character.toLowerCase(InputArray[i]) == 'v') {
+            if (Character.toLowerCase(inputArray[i]) == 'v') {
                 output = output + "...-";
             }
-            if (Character.toLowerCase(InputArray[i]) == 'w') {
+            if (Character.toLowerCase(inputArray[i]) == 'w') {
                 output = output + ".--";
             }
-            if (Character.toLowerCase(InputArray[i]) == 'x') {
+            if (Character.toLowerCase(inputArray[i]) == 'x') {
                 output = output + "-..-";
             }
-            if (Character.toLowerCase(InputArray[i]) == 'y') {
+            if (Character.toLowerCase(inputArray[i]) == 'y') {
                 output = output + "-.--";
             }
-            if (Character.toLowerCase(InputArray[i]) == 'z') {
+            if (Character.toLowerCase(inputArray[i]) == 'z') {
                 output = output + "--..";
             }
             output = output + "/";

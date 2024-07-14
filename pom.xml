@@ -73,7 +73,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>org.example.Main</mainClass>
+                            <mainClass>org.example.MorseCodeApp</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
